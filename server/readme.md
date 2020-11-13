@@ -1,7 +1,6 @@
 # Python git-fix-me
 
-> Python Flask backend app for playing with a basic library. It has the ability to add books with information such as the Title, author, genre etc.. It uses a flask sqlite database along with flask-marshmallow for object serialization/deserialization. You can create a user, hash their password, and store that data in a database. During the login process it will check that data.
-> ​
+> Python Flask backend app for playing with a basic library. It has the ability to add books with information such as the Title, author, genre etc.. It uses a flask sqlite database along with flask-marshmallow for object serialization/deserialization.
 
 ## Dependencies
 
@@ -52,42 +51,29 @@
   - BODY: `application/json`
     ```json
     {
-      "username": "test",
-      "password": "test"
+      "title": "title",
+      "author": "author",
+      "url": "url",
+      "genre": "genre",
+      "star_rating": "1",
+      "book_read": false
     }
     ```
-- GET
 
+- GET All Books
   - METHOD: `GET`
   - URL: http://localhost:5000/api/books
-  - BODY: `application/json`
 
+- Update Book-read
+  - METHOD: `PATCH`
+  - URL: http://localhost:5000/api/book-read/<id>
+  - BODY: `application/json`
     ```json
     {
-      "username": "test",
-      "password": "test"
+      "bookread": true
     }
     ```
 
-    - PUT / PATCH by Id
-    - METHOD: `PATCH`
-    - URL: http://localhost:5000/api/book-read/<id>
-    - BODY: `application/json`
-
-      ```json
-      {
-        "username": "test",
-        "password": "test"
-      }
-      ```
-
-    - DELETE
-    - METHOD: `DELETE`
-    - URL: http://localhost:5000/api/delete-book/<id>
-    - BODY: `application/json`
-      ```json
-      {
-        "username": "test",
-        "password": "test"
-      }
-      ```
+- DELETE a single book
+  - METHOD: `DELETE`
+  - URL: http://localhost:5000/api/delete-book/<id>

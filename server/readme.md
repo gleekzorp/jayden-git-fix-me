@@ -23,6 +23,8 @@
 
 ## Getting Started
 
+- Make sure you are in your Server Folder
+
 - download zip or clone
 - Install all dependencies
   ```
@@ -46,6 +48,7 @@
 ## Flask Routes (test in postman or build a front-end)
 
 - Create Book
+
   - METHOD: `POST`
   - URL: http://localhost:5000/api/add-book
   - BODY: `application/json`
@@ -61,10 +64,12 @@
     ```
 
 - GET All Books
+
   - METHOD: `GET`
   - URL: http://localhost:5000/api/books
 
 - Update Book-read
+
   - METHOD: `PATCH`
   - URL: http://localhost:5000/api/book-read/<id>
   - BODY: `application/json`

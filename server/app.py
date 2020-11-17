@@ -68,7 +68,7 @@ def update_book(id):
     book = Book.query.get(id)
     book.book_read = request.json["bookread"]
     db.session.commit()
-    return jsonify("Book Updated")
+    return jsonify(message="Book Updated")
 
 
 # DELETE
@@ -77,7 +77,7 @@ def delete_book(id):
     book = book.query.get(id)
     db.session.delete(book)
     db.session.commit()
-    return jsonify("Book Deleted!")
+    return jsonify(message="Book Deleted!")
 
 
 if __name__ == "__main__":

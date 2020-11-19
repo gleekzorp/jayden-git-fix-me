@@ -75,7 +75,7 @@
   - BODY: `application/json`
     ```json
     {
-      "bookread": true
+      "book_read": true
     }
     ```
 

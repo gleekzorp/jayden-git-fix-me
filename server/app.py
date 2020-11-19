@@ -74,7 +74,7 @@ def update_book(id):
 # DELETE
 @app.route("/delete-book/<id>", methods=["DELETE"])
 def delete_book(id):
-    book = book.query.get(id)
+    book = Book.query.get(id)
     db.session.delete(book)
     db.session.commit()
     return jsonify(message="Book Deleted!")
